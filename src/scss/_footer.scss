@@ -1,0 +1,15 @@
+.prefooter {
+	@include container();
+	height: px-to-rem(370);
+	background: #21a110;
+	margin-top: px-to-rem(20);
+}
+
+.footer {
+	margin-top: px-to-rem(20);
+	height: px-to-rem(360);
+	background: #afb608;
+	width: 100%;
+}
+
+

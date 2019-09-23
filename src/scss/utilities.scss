@@ -1,0 +1,19 @@
+@function px-to-rem($px) {
+	@return ($px / 24) + rem;
+}
+
+@mixin container() {
+	max-width: px-to-rem(1400);
+
+	@media (max-width: 800px) {
+		max-width: px-to-rem(800);
+		margin-left: px-to-rem(20);
+		margin-right: px-to-rem(20);
+	}
+
+	@media (max-width: 500px) {
+		max-width: px-to-rem(500);
+	}
+
+	margin: auto;
+}

@@ -1,1 +1,19 @@
+.navbar {
+	@include container();
+	height: px-to-rem(125);
+	background: #424413;
 
+	@media (max-width: 500px) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.banner {
+	width: 100%;
+	height: px-to-rem(550);
+	background: url("/layout/grass.jpg") center;
+	background-size: cover;
+	object-fit: cover;
+	margin-top: px-to-rem(20);
+}
