@@ -14,7 +14,6 @@ $ npm install
 $ npm start
 ```
 
-Powyższa komenda będzie obserwować zmiany w kodzie i postawi testowy serwer http. 
-Jeżeli potrzebne jest tylko zbudowanie styli, mozna wpisać po prostu `npm run build`.
+Powyższa komenda będzie obserwować zmiany w kodzie i postawi testowy serwer http.
 
 Reszte zadań można otworzyć bez wstępnych kroków.
