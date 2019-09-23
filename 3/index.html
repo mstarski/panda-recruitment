@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<div id="notice"></div>
+		<div id="gallery">Nothing fetched yet.</div>
+		<button onclick="show_random_cat()">Just one more cat!</button>
+
+		<script>
+			async function show_random_cat() {
+				set_loading(true);
+				const response = await fetch(
+					`https://api.giphy.com/v1/gifs/random?api_key=cXCZWyU7pS4e9K0TA0mToVVRZi5vh5sw&tag=cat`
+				);
+				const { data } = await response.json();
+				create_gif(data.image_url);
+				set_loading(false);
+			}
+
+			function set_loading(state) {
+				const notice = document.getElementById("notice");
+				const textNode = document.createTextNode("Loading...");
+				if (state) {
+					notice.appendChild(textNode);
+				} else {
+					notice.removeChild(notice.firstChild);
+				}
+			}
+
+			function create_gif(url) {
+				const gif = document.createElement("img");
+				const body = document.querySelector("#gallery");
+				body.innerText = "";
+				gif.src = url;
+				body.appendChild(gif);
+			}
+		</script>
+	</body>
+</html>
